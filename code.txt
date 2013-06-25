@@ -1,0 +1,8 @@
+
+Step 2
+
+curl -k https://raw.github.com/octanner/kata2/master/weather.dat | tail -n +6 | awk '{print $1,$2,$3,$2-$3}' | sort -k 4 -n | tail -n +4 | grep -v mo > weather.txt
+
+Step 3
+
+curl -k https://raw.github.com/octanner/kata2/master/football.dat | tail -n +6 | awk '{print $7-$9,$2,$7,$9}' | sed 's/^-//g' | sort -n -k1 | tail -n +3 | awk '{print $2,$3,$4}' > sports.txt
